@@ -1,4 +1,7 @@
 # nawk -v node=whatever -f pj.awk pj.txt
+#
+# \n => LF, \r => CR, NF => Number Of Fields, NR => Number of Records
+#
 BEGIN {OFS = "\n"}
 NR == 1 {for (i = 1; i <=NF; i++)
 		tag[i]=$i
