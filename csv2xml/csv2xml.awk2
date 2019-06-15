@@ -1,3 +1,8 @@
+
+# -----===----- The Original Code was taken from this site -----===------ 
+# https://www.unix.com/shell-programming-and-scripting/21404-csv-xml.html
+#------------------------------------------------------------------------
+
 # awk -F ',' -v node=Bad-Proxy -f csv2xml.awk Bad-Proxy.csv
 #
 # \n => LF
