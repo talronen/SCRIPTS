@@ -10,11 +10,11 @@ BEGIN {OFS = "\n"}
 NR == 1 {for (i = 1; i <= NF; i++)
             tag[i]=$i
 
-         print "<" node ">"}
-NR != 1 {print "    <" node ">"
+         print "<" MasterXML ">"}
+NR != 1 {print "    <" Item ">"
 		 for (i = 1; i <= NF; i++)
 	       print "      <"tag[i]">"$i"</"tag[i]">"
-	     print "    </" node ">"
+	     print "    </" Item ">"
         }
 
-END {print "</" node ">"}
+END {print "</" MasterXML ">"}
