@@ -8,13 +8,13 @@
 
 BEGIN {OFS = "\n"}
 NR == 1 {for (i = 1; i <= NF; i++)
-          #  tag[i]=$i
-          #  ls
+            tag[i]=$i
 
-         print "<Masters>"}
-NR != 1 {print "   <" node ">"
+         print "<Master>"}
+NR != 1 {print "    <" node ">"
 		 for (i = 1; i <= NF; i++)
-	     print "     <"tag[i]">"$i"</"tag[i]">"
+	       print "      <"tag[i]">"$i"</"tag[i]">"
+	     print "    </" node ">"
         }
 
-END {print "</Masters>"}
+END {print "</Master>"}
