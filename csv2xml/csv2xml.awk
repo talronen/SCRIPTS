@@ -1,4 +1,4 @@
-# awk -F ',' -v node=Bad-Proxy -f test.awk sample.csv
+# awk -F ',' -v node=Bad-Proxy -f csv2xml.awk Bad-Proxy.csv
 #
 # \n => LF
 # \r => CR
