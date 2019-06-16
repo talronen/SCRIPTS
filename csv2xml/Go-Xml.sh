@@ -7,6 +7,10 @@
 # Metric file name example Bad-Proxy.csv
 # -----------------------------------------------------------
 
+# ---===--- Tool Script to Replace all White Spcaes With Single Coma ---===---
+# # ---===--- Command to Replace all Spaces in a file with Coma ---===---
+# sed -e 's/\s\+/,/g' orig.txt > modified.txt
+
 fullfile=$1
 fname=$(basename $fullfile)
 fbname=${fname%.*}
