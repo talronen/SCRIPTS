@@ -1,19 +1,30 @@
 #!/bin/bash
 
-# ---====--- Sending XML Alert File using csv2xml.awk ---===----
-# awk -F ',' -v node=Bad-Proxy -f csv2xml.awk Bad-Proxy.csv
+# ---===--- Use This Script to Convert a CSV File to XLM ---===---
 
-#---===--- Find Metrics File Name Without Extention ---===---
+# --       Generate XML File from a Csv Source file      --
+# awk -F ',' -v node=Bad-Proxy -f csv2xml.awk Bad-Proxy.csv
+# ---------------------------------------------------------
+
+
+
+#   The Real Program Starts Heare 
+
+# Find Metrics File Name Without Extention 
 # Metric file name example Bad-Proxy.csv
-# -----------------------------------------------------------
+
 
 fullfile=$1
 fname=$(basename $fullfile)
 fbname=${fname%.*}
 
-#---===--- Get Metric Filename Before "-" ---===---
+
+#---------   Grab Metric Name Before "-"   ---------
 Item1="$(echo ${fname} | awk -F '[-]' '{print $1}')"
+
+
 #echo "awk -F ',' -v node="$fbname" -f csv2xml.awk2" $1
 
-#---===--- Create The XMl File ---===---
+#-----------         Generate The XMl Output          ----------
 awk -F ',' -v MasterXML=$fbname -v Item=$Item1 -f csv2xml.awk2 $1
+
