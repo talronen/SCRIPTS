@@ -4,6 +4,10 @@
 #------------------------------------------------------------------------
 
 # awk -F ',' -v node=Bad-Proxy -f csv2xml.awk Bad-Proxy.csv
+
+# ---===--- Command to Replace all Spaces in a file with Coma ---===---
+# sed -e 's/\s\+/,/g' orig.txt > modified.txt
+
 #
 # \n => LF
 # \r => CR
