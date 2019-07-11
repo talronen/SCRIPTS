@@ -1,0 +1,1 @@
+db.getCollection('Personas').find({"Site": "OM.Facebook", "IsPublic" : true, "IsActive": true},{Site:1, ProxyIp:1})

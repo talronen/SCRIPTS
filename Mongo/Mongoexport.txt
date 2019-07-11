@@ -1,0 +1,2 @@
+Export Proxy List
+mongoexport -d Harvester -c Personas -q '{WasBlocked:false, IsActive: true, IsPublic: true, Site: {$regex: "OM.*"}}' -f "Site,ProxyIp" --sort '{Site:1, _id:0,ProxyIp:1}' --type=csv
