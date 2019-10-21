@@ -1,0 +1,16 @@
+﻿#!/bin/bash
+
+mongodump
+
+if [ $? -eq 0 ]
+then
+  echo "The script ran ok"
+  echo "-----------------------------"
+  echo "Matrics-Monitor,MongoType=Full,Status=OK"
+  exit 0
+else
+  echo "The script failed" >&2
+  echo "-----------------------------"
+  echo "Matrics-Monitor,MongoType=Full,Status=Failed"
+  exit 1
+fi
