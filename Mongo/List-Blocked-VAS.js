@@ -1,0 +1,1 @@
+db.getCollection('Personas').find({WasBlocked:true,IsPublic:true})
