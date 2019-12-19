@@ -4,6 +4,7 @@
 #
 # Syntx: ./datediff.sh '2019/1/10' '2019/1/1'
 #
+#
 
 #datediff() {
 #    d1=$(date -d "$1" +%s)
